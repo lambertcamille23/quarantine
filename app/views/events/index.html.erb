@@ -1,0 +1,8 @@
+<h1><%= @category.name%></h1>
+  <% @events.each do |event| %>
+  <li> <%=   event.description %> </li>
+  <li> <%=   event.link %> </li>
+
+  <% end %>
+
+

@@ -2,7 +2,15 @@
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
 #
 # Examples:
-categories = Category.create([{ name: 'Sport' }, { name: 'Bien-être' }, { name: 'Talk' }])
+require 'faker'
+Category.destroy_all
+
+Category.create([{ name: 'Sport' }, { name: 'Bien-être / Beauté' }, { name: 'Yoga / Pilate' },{ name: 'Kids/Famille' }, { name: 'Alimentation' }, { name: 'Culture' }, { name: 'Lifestyle' }])
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Category.all.each do |category|
+  3.times do
+    Event.create(description: Faker::Sports::Football.team, link: "@quarantine", category: category)
+  end
+end
