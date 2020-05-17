@@ -11,6 +11,7 @@ Category.create([{ name: 'Sport' }, { name: 'Bien-être / Beauté' }, { name: 'Y
 #   Character.create(name: 'Luke', movie: movies.first)
 Category.all.each do |category|
   3.times do
-    Event.create(description: Faker::Sports::Football.team, link: "@quarantine", category: category)
+    fake_descriptions = ["Yoga nidra", "Yoga dance", "Food and chill", "Babouk porc"]
+    Event.create(description: fake_descriptions.sample, link: "@quarantine", category: category, date: Time.zone.now - (1..60).to_a.sample.send(['hours', 'minutes', 'days'].sample))
   end
 end

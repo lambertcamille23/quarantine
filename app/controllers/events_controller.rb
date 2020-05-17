@@ -4,9 +4,6 @@ class EventsController < ApplicationController
   def index
     @category = Category.find(params[:category_id])
     @events = @category.events
-
-
-
   end
 
   #def new
