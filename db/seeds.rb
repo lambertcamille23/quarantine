@@ -2,7 +2,6 @@
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
 #
 # Examples:
-require 'faker'
 Category.destroy_all
 
 Category.create([{ name: 'Sport' }, { name: 'Bien-être - Beauté' }, { name: 'Yoga - Pilate' },{ name: 'Kids - Famille' }, { name: 'Alimentation' }, { name: 'Culture' }, { name: 'Lifestyle' }])
@@ -15,4 +14,3 @@ Category.all.each do |category|
     Event.create(description: fake_descriptions.sample, link: "@quarantine", category: category, date: Time.zone.now - (1..60).to_a.sample.send(['hours', 'minutes', 'days'].sample))
   end
 end
-AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
