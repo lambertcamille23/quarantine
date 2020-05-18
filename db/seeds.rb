@@ -5,7 +5,7 @@
 require 'faker'
 Category.destroy_all
 
-Category.create([{ name: 'Sport' }, { name: 'Bien-être / Beauté' }, { name: 'Yoga / Pilate' },{ name: 'Kids/Famille' }, { name: 'Alimentation' }, { name: 'Culture' }, { name: 'Lifestyle' }])
+Category.create([{ name: 'Sport' }, { name: 'Bien-être - Beauté' }, { name: 'Yoga - Pilate' },{ name: 'Kids - Famille' }, { name: 'Alimentation' }, { name: 'Culture' }, { name: 'Lifestyle' }])
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
@@ -15,3 +15,4 @@ Category.all.each do |category|
     Event.create(description: fake_descriptions.sample, link: "@quarantine", category: category, date: Time.zone.now - (1..60).to_a.sample.send(['hours', 'minutes', 'days'].sample))
   end
 end
+AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?

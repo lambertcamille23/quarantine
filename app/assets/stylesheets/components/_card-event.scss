@@ -1,0 +1,29 @@
+.event-details {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  //border: 1px solid #EDEDED;
+  position: relative;
+  background: white;
+  box-sizing: border-box;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.date-details {
+ color: #000000;
+  font-size: 14px;
+  flex: 15%;
+}
+
+.description-details {
+ color: #000000;
+  font-size: 14px;
+  flex: 20%;
+}
+
+.link-details {
+ color: #000000;
+  font-size: 14px;
+  flex: 30%;
+}

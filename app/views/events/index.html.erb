@@ -1,8 +1,32 @@
-<h1><%= @category.name%></h1>
-  <% @events.each do |event| %>
-  <li> <%=   event.description %> </li>
-  <li> <%=   event.link %> </li>
+  <h1><%= @category.name%></h1>
+    <table class="table table-sm">
+      <thead>
+        <tr>
+          <th scope="row"><% @events.each do |event| %></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="col"><%= event.date %></th>
+          <td><%=  event.description %></td>
+          <td><%= event.link %></td>
+        </tr>
+      <% end %>
+      </tbody>
+    </table>
+</div>
 
+
+
+
+
+ <h1><%= @category.name%></h1>
+ <div class= "shadow rounded bg-white py-3 px-3 mb-3">
+ <% @events.each do |event| %>
+ <div class="event-details">
+  <p class="date-details" ><%= event.date %></p>
+  <p class="description-details" > <%=  event.description %></p>
+  <p class="link-details"> <%= event.link %></p>
   <% end %>
-
-
+  </div>
+</div>
