@@ -1,32 +1,17 @@
-  <h1><%= @category.name%></h1>
-    <table class="table table-sm">
-      <thead>
-        <tr>
-          <th scope="row"><% @events.each do |event| %></th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th scope="col"><%= event.date %></th>
-          <td><%=  event.description %></td>
-          <td><%= event.link %></td>
-        </tr>
-      <% end %>
-      </tbody>
-    </table>
-</div>
+<h1><%= @category.name%></h1>
 
-
-
-
-
- <h1><%= @category.name%></h1>
- <div class= "shadow rounded bg-white py-3 px-3 mb-3">
- <% @events.each do |event| %>
- <div class="event-details">
-  <p class="date-details" ><%= event.date %></p>
-  <p class="description-details" > <%=  event.description %></p>
-  <p class="link-details"> <%= event.link %></p>
+<div class="container">
+  <!-- <div class="d-flex justify-content-between  bg-white">
+    <p>Heure</p>
+    <p>description</p>
+    <p>lien</p>
+  </div> -->
+  <% @events.each do |event| %>
+    <div class="rounded py-2 d-flex justify-content-between bg-white">
+      <p><%= event.date.strftime('%H:%M') %></p>
+      <p><%= event.description %></p>
+      <p><%= event.link %></p>
+    </div>
   <% end %>
-  </div>
 </div>
+
