@@ -1,17 +1,30 @@
-<h1><%= @category.name%></h1>
 
 <div class="container">
+<h1>DailyLive</h1>
+<div id=event-category>
+  <h2><%= @category.name%></h2>
+  <p>Rendez vous le:</p>
+</div>
+
+
   <!-- <div class="d-flex justify-content-between  bg-white">
     <p>Heure</p>
     <p>description</p>
     <p>lien</p>
   </div> -->
   <% @events.each do |event| %>
-    <div class="rounded py-2 d-flex justify-content-between bg-white">
-      <p><%= event.date.strftime('%H:%M') %></p>
-      <p><%= event.title %></p>
-      <p><%= event.description %></p>
-      <p><%= event.link %></p>
+    <div class="py-2 d-flex justify-content-around">
+      <div class="d-flex">
+        <p><%= event.date.strftime('%H:%M') %></p>
+       </div>
+      <div class="d-flex flex-column bd-highlight mb-3">
+        <div id= "title" class="font-weight-bold bd-highlight"><%= event.title %>
+        </div>
+        <div id= "description" class="bd-highlight"><%= event.description %>
+        </div>
+      </div>
+        <div class="d-flex"><%= event.link %>
+        </div>
     </div>
   <% end %>
 </div>

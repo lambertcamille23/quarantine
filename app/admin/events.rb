@@ -5,7 +5,7 @@ ActiveAdmin.register Event do
   #
   # Uncomment all parameters which should be permitted for assignment
   #
-  permit_params :description, :link, :date, :category_id
+  permit_params :title, :description, :link, :date, :category_id
   #
   # or
   #
