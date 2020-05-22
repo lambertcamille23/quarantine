@@ -11,6 +11,6 @@ Category.create([{ name: 'Sport' }, { name: 'Bien-être - Beauté' }, { name: 'Y
 Category.all.each do |category|
   3.times do
     fake_descriptions = ["Yoga nidra", "Yoga dance", "Food and chill", "Babouk porc"]
-    Event.create(description: fake_descriptions.sample, link: "@quarantine", category: category, date: Time.zone.now - (1..60).to_a.sample.send(['hours', 'minutes', 'days'].sample))
+    Event.create(description: fake_descriptions.sample, link: "@quarantine", title:"Medidation", category: category, date: Time.zone.now - (1..60).to_a.sample.send(['hours', 'minutes', 'days'].sample))
   end
 end
