@@ -5,6 +5,15 @@
     <p class="text-center mb-5">Rendez vous le:</p>
   </div>
 
+  <div class="datepicker">
+    <% 7.times do |i| %>
+    <a href="#" class="day <%= 'active' if i == 0 %>">
+      <span class="name">Lun</span>
+      <span class="number"><%= 20 + i %></span>
+    </a>
+    <% end %>
+  </div>
+
   <% @events.each do |event| %>
     <div class="event-card">
       <div class="hour">

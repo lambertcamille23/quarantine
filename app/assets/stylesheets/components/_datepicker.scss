@@ -1,0 +1,31 @@
+.datepicker {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 56px;
+
+  .day {
+    height: 60px;
+    width: 60px;
+    border-radius: 30px;
+    margin: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 1em;
+    text-decoration: none;
+    color: $gray;
+    transition: background .3s ease;
+
+    &:hover {
+      background: $gray-100;
+
+    }
+
+    &.active {
+      background: $datepicker-active;
+      color: white;
+    }
+  }
+
+}
