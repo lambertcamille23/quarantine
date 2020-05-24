@@ -8,27 +8,32 @@
 
   <div class="datepicker">
     <% 7.times do |i| %>
-    <a href="#" class="day <%= 'active' if i == 0 %>">
-      <span class="name">Lun</span>
-      <span class="number"><%= 20 + i %></span>
-    </a>
+      <% current_day = @today + i.days %>
+      <%= link_to category_events_path(@category.slug, day: current_day), class: "day #{'active' if current_day == @selected_day}" do %>
+        <span class="name"><%= day_name(current_day.wday) %></span>
+        <span class="number"><%= current_day.day %></span>
+      <% end %>
     <% end %>
   </div>
 
-  <% @events.each do |event| %>
-    <div class="event-card">
-      <div class="hour">
-        <%= event.date.strftime('%Hh%M') %>
+  <% if @events.empty? %>
+    <p>Pas de live ajd</p>
+  <% else %>
+    <% @events.each do |event| %>
+      <div class="event-card">
+        <div class="hour">
+          <%= event.date.strftime('%Hh%M') %>
+        </div>
+        <div class="description">
+          <h5>
+            <%= event.title %>
+          </h5>
+          <p>
+            <%= event.description %>
+          </p>
+        </div>
+        <%= link_to "Participer", event.link %>
       </div>
-      <div class="description">
-        <h5>
-          <%= event.title %>
-        </h5>
-        <p>
-          <%= event.description %>
-        </p>
-      </div>
-      <%= link_to "Participer", event.link %>
-    </div>
+    <% end %>
   <% end %>
 </div>

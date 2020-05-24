@@ -3,7 +3,9 @@ class EventsController < ApplicationController
 
   def index
     @category = Category.find_by(slug: params[:category_slug])
-    @events = @category.events
+    @today = Date.today
+    @selected_day = params[:day].present? ? Date.parse(params[:day]).to_datetime : Date.today.to_datetime
+    @events = @category.events.where("date >= :start_day AND date < :end_day", start_day: @selected_day, end_day: @selected_day + 1.days )
   end
 
   #def new
