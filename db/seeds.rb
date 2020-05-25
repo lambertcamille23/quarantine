@@ -4,7 +4,7 @@
 # Examples:
 Category.destroy_all
 
-Category.create([{ name: 'SPORT' }, { name: 'BIEN-ÊTRE / BEAUTÉ' }, { name: 'YOGA / PILATE' },{ name: 'KIDS - FAMILLE' }, { name: 'FOOD' }, { name: 'CULTURE' }, { name: 'LIFESTYLE' }])
+Category.create([{ name: 'YOGA / PILATE' }, { name: 'SPORT' }, { name: 'LIFESTYLE' },{ name: 'CULTURE' }, { name: 'FOOD' }, { name: 'KIDS / FAMILLE' }, { name: 'BIEN-ÊTRE / BEAUTÉ' }])
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)

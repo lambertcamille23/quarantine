@@ -1,14 +1,14 @@
  <div class="container mt-4">
-    <h1>Daily Live</h1>
-    <h2>On fait quoi aujourd'hui ?</h2>
+    <h1 class="text-center">Daily Live</h1>
+    <h2 class="text-center mb-5 ">On fait quoi aujourd'hui ?</h2>
       <% @categories.each do |category| %>
       <div id="list-category">
-        <ul>
+        <ul class="text-center">
           <li> <%= link_to category.name  , category_events_path(category.slug) %></li>
         </ul>
       </div>
       <% end %>
-      <p>Vous avez un lien à nous soumettre? <%= mail_to "lambertcamille23@gmail.com", "Contactez-nous" %></p>
+      <p class="text-center mt-5">Vous avez un live à nous soumettre ? <%= mail_to "lambertcamille23@gmail.com", "Contactez-nous" %></p>
   </div>
 
 

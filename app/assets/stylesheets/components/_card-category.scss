@@ -1,14 +1,12 @@
 ul {
   list-style: none;
-  display: flex;
-  justify-content: center;
 }
 h2 {
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 
 #list-category {
-
+  transition: background .3s ease;
 }
 
 
@@ -17,7 +15,6 @@ h2 {
   text-decoration: none;
 }
 
-#list-category a:hover, a.active {
+#list-category a:hover{
   border-bottom: 3px solid #EDAF50;
-  transition: background .3s ease;
 }
