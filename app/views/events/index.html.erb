@@ -1,9 +1,10 @@
 <div class="container">
-  <h1>DailyLive</h1>
+  <h1 class="text-center">DailyLive</h1>
   <div id=event-category>
-    <h2><%= @category.name%></h2>
-    <%= mail_to "lambertcamille23@gmail.com", "Contactez-nous" %>
-    <p class="text-center mb-5">Rendez vous le:</p>
+    <h1 class="text-center mt-5" ><%= @category.name%></h1>
+    <p class="text-center mb-0">Vous avez un live à nous soumettre ?</p>
+    <p class="text-center mb-5"><%= mail_to "lambertcamille23@gmail.com", "Contactez-nous" %></p>
+    <p class="text-center mb-2">Rendez vous le:</p>
   </div>
 
   <div class="datepicker">
@@ -17,7 +18,7 @@
   </div>
 
   <% if @events.empty? %>
-    <p>Pas de live ajd</p>
+    <p class="text-center">Pas de live aujourd'hui</p>
   <% else %>
     <% @events.each do |event| %>
       <div class="event-card">
