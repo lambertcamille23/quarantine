@@ -1,13 +1,5 @@
 // Import Google fonts
 @import url('https://fonts.googleapis.com/css2?family=Marmelad&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
-
-// Define fonts for body and headers
-$body-font: "Marmelad", "Helvetica", "sans-serif";
-$headers-font: "Marmelad", "Helvetica", "sans-serif";
-$sub-font: "Pacifico", "cursive";
-
 
 // ADDITIONAL FONTS
 //"Merriweather", "sans-serif";
@@ -15,14 +7,14 @@ $sub-font: "Pacifico", "cursive";
 
 
 // To use a font file (.woff) uncomment following lines
-// @font-face {
-//   font-family: "Font Name";
-//   src: font-url('FontFile.eot');
-//   src: font-url('FontFile.eot?#iefix') format('embedded-opentype'),
-//        font-url('FontFile.woff') format('woff'),
-//        font-url('FontFile.ttf') format('truetype')
-// }
-// $my-font: "Font Name";
+@font-face {
+  font-family: "Chapaza";
+  src: font-url('Chapaza.ttf');
+}
+
+// Define fonts for body and headers
+$body-font: "Marmelad", "Helvetica", "sans-serif";
+$headers-font: "Chapaza", "Helvetica", "sans-serif";
 
 //font-family: 'Marmelad', sans-serif;
 //<link href="https://fonts.googleapis.com/css2?family=Marmelad&display=swap" rel="stylesheet">
