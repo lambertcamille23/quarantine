@@ -1,10 +1,10 @@
-<div class="background-home">
-  <div class="container">
-     <div class="logo mx-auto d-block mt-3">
-     <%= link_to root_path do%>
-        <%= image_tag "logo2.svg" %>
-      <% end %>
-    </div>
+<div class="container">
+   <div class="logo mx-auto d-block my-4">
+   <%= link_to root_path do%>
+      <%= image_tag "logo2.svg" %>
+    <% end %>
+  </div>
+  <div class="min-height-100">
     <div id=event-category>
       <h3 class="text-center mt-5"><%= @category.name%></h3>
       <p id="link-contact" class="text-center mb-0">Vous avez un live à nous soumettre ?</p>
@@ -42,5 +42,4 @@
       <% end %>
     <% end %>
   </div>
-</div>
 </div>
