@@ -27,7 +27,7 @@
       <% @events.each do |event| %>
         <div class="event-card">
           <div class="hour">
-            <%= event.date.strftime('%Hh%M') %>
+            <%= event.date.strftime('%Hh%M').now %>
           </div>
           <div class="description">
             <h5>

@@ -3,7 +3,7 @@
      <%= image_tag "logo2.svg" %>
   </div>
  <div class="container">
-    <h2 class="text-center mt-5 mb-4">On fait quoi aujourd'hui ?</h2>
+    <h5 class="text-center mt-4 mb-5">On fait quoi aujourd'hui ? </h5>
       <% @categories.each do |category| %>
       <div class="list-category text-center">
         <ul>
@@ -13,7 +13,9 @@
       <% end %>
       <div class="text-center mt-4">
         <p id="link-contact">Vous avez un live à nous soumettre ?  <%= mail_to "lambertcamille23@gmail.com", "Contactez-nous" %></p>
-        <i class="fa fa-instagram"></i>
+         <%= link_to "https://www.instagram.com/quarantine_live/?hl=fr" do %>
+        <i class="fab fa-instagram"></i>
+        <% end %>
       </div>
   </div>
 </div>
