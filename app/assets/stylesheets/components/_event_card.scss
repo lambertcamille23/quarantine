@@ -1,5 +1,5 @@
 .event-card {
-  max-width: 640px;
+  max-width: 588px;
   margin: auto;
   margin-bottom: 32px;
   display: flex;
@@ -8,8 +8,9 @@
   .hour {
     padding: 0px 24px;
     font-size: 1.2em;
-    font-weight: 200;
+    font-weight: 300;
     margin-bottom: auto;
+    font-family: 'lato', sans-serif;
   }
 
   .description {
@@ -20,9 +21,10 @@
     }
 
     p {
-      font-size: 0.95em;
-      font-weight: 200;
+      font-size: 0.85em;
+      font-weight: 300;
       opacity: 0.8;
+      font-family: 'Lato', sans-serif;
     }
   }
 
@@ -42,3 +44,18 @@
     }
   }
 }
+
+#link-contact a {
+  color: black;
+  text-decoration: none;
+  border-bottom: 1px solid black;
+  font-style: italic;
+}
+p#link-contact {
+    font-size: 12px;
+    font-family: 'Lato';
+    word-spacing: 0.1em;
+    letter-spacing: 0.1em;
+}
+
+

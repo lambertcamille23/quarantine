@@ -1,11 +1,14 @@
 <div class="background-home" style="background-image: url(<%= image_path 'bg.png' %>)">
   <div class="container">
-    <h1 class="text-center">DailyLive</h1>
+     <div class="logo mx-auto d-block mt-3">
+     <%= link_to root_path do%>
+        <%= image_tag "logo2.svg" %>
+      <% end %>
+    </div>
     <div id=event-category>
-      <h1 class="text-center mt-5" ><%= @category.name%></h1>
-      <p class="text-center mb-0">Vous avez un live à nous soumettre ?</p>
-      <p class="text-center mb-5"><%= mail_to "lambertcamille23@gmail.com", "Contactez-nous" %></p>
-      <p class="text-center mb-2">Rendez vous le:</p>
+      <h3 class="text-center mt-5" ><%= @category.name%></h3>
+      <p id="link-contact" class="text-center mb-0">Vous avez un live à nous soumettre ?</p>
+      <p id="link-contact" class="text-center mb-4"><%= mail_to "lambertcamille23@gmail.com", "Contactez-nous" %></p>
     </div>
 
     <div class="datepicker">
@@ -40,4 +43,4 @@
     <% end %>
   </div>
 </div>
-
+</div>

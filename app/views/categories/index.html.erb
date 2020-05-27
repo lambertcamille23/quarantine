@@ -1,20 +1,21 @@
 <div class="background-home" style="background-image: url(<%= image_path 'bg.png' %>)">
+  <div class="logo mx-auto d-block mt-3">
+     <%= image_tag "logo2.svg" %>
+  </div>
  <div class="container">
-    <h1 class="text-center">Daily Live</h1>
-    <h2 class="text-center mb-5 ">On fait quoi aujourd'hui ?</h2>
+    <h2 class="text-center mt-5 mb-4">On fait quoi aujourd'hui ?</h2>
       <% @categories.each do |category| %>
-      <div id="list-category">
-        <ul class="text-center">
+      <div class="list-category text-center">
+        <ul>
           <li> <%= link_to category.name  , category_events_path(category.slug) %></li>
         </ul>
       </div>
       <% end %>
-      <div class="text-center mt-5">
-        <p>Vous avez un live à nous soumettre ?</p>
-        <p id="link-contact"><%= mail_to "lambertcamille23@gmail.com", "Contactez-nous" %></p>
+      <div class="text-center mt-4">
+        <p id="link-contact">Vous avez un live à nous soumettre ?  <%= mail_to "lambertcamille23@gmail.com", "Contactez-nous" %></p>
+        <i class="fa fa-instagram"></i>
       </div>
   </div>
 </div>
-
 
 
