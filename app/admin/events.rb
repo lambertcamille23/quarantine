@@ -14,5 +14,15 @@ ActiveAdmin.register Event do
   #   permitted << :other if params[:action] == 'create' && current_user.admin?
   #   permitted
   # end
+    form do |f|
+    inputs 'Details' do
+      input :category
+      input :title
+      input :description
+      input :link
+      input :date#, as: :string
+    end
+    actions
+  end
 
 end

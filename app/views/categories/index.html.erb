@@ -1,23 +1,21 @@
-<div class="background-home" style="background-image: url(<%= image_path 'bg.png' %>)">
-  <div class="logo mx-auto d-block mt-3">
-     <%= image_tag "logo2.svg" %>
-  </div>
- <div class="container">
-    <h5 class="text-center mt-4 mb-5">On fait quoi aujourd'hui ? </h5>
-      <% @categories.each do |category| %>
-      <div class="list-category text-center">
-        <ul>
-          <li> <%= link_to category.name  , category_events_path(category.slug) %></li>
-        </ul>
-      </div>
-      <% end %>
-      <div class="text-center mt-4">
-        <p id="link-contact">Vous avez un live à nous soumettre ?  <%= mail_to "lambertcamille23@gmail.com", "Contactez-nous" %></p>
-         <%= link_to "https://www.instagram.com/quarantine_live/?hl=fr" do %>
-        <i class="fab fa-instagram"></i>
-        <% end %>
-      </div>
-  </div>
+<div class="logo mx-auto d-block my-4">
+   <%= image_tag "logo2.svg" %>
+</div>
+
+<div class="min-height-100">
+  <h5 class="text-center mt-4 mb-5">On fait quoi aujourd'hui ? </h5>
+  <% @categories.each do |category| %>
+    <div class="list-category text-center">
+      <%= link_to category.name, category_events_path(category.slug), style: "border-color: #{category.name};" %>
+    </div>
+  <% end %>
+</div>
+
+<div class="text-center">
+  <p id="link-contact">Vous avez un live à nous soumettre ?  <%= mail_to "lambertcamille23@gmail.com", "Contactez-nous" %></p>
+   <%= link_to "https://www.instagram.com/quarantine_live/?hl=fr" do %>
+  <i class="fab fa-instagram"></i>
+  <% end %>
 </div>
 
 

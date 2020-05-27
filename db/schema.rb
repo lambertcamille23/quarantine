@@ -24,12 +24,12 @@ ActiveRecord::Schema.define(version: 2020_05_24_132104) do
 
   create_table "events", force: :cascade do |t|
     t.string "description"
-    t.string "title"
     t.string "link"
     t.datetime "date"
     t.bigint "category_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "title"
     t.index ["category_id"], name: "index_events_on_category_id"
   end
 

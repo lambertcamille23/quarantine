@@ -1,4 +1,4 @@
-<div class="background-home" style="background-image: url(<%= image_path 'bg.png' %>)">
+<div class="background-home">
   <div class="container">
      <div class="logo mx-auto d-block mt-3">
      <%= link_to root_path do%>
@@ -6,7 +6,7 @@
       <% end %>
     </div>
     <div id=event-category>
-      <h3 class="text-center mt-5" ><%= @category.name%></h3>
+      <h3 class="text-center mt-5"><%= @category.name%></h3>
       <p id="link-contact" class="text-center mb-0">Vous avez un live à nous soumettre ?</p>
       <p id="link-contact" class="text-center mb-4"><%= mail_to "lambertcamille23@gmail.com", "Contactez-nous" %></p>
     </div>
