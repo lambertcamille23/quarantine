@@ -1,41 +1,43 @@
-<div class="container" style="background-image: url(<%= image_path 'bg.png' %>)">
-  <h1 class="text-center">DailyLive</h1>
-  <div id=event-category>
-    <h1 class="text-center mt-5" ><%= @category.name%></h1>
-    <p class="text-center mb-0">Vous avez un live à nous soumettre ?</p>
-    <p class="text-center mb-5"><%= mail_to "lambertcamille23@gmail.com", "Contactez-nous" %></p>
-    <p class="text-center mb-2">Rendez vous le:</p>
-  </div>
+<div class="background-home" style="background-image: url(<%= image_path 'bg.png' %>)">
+  <div class="container">
+    <h1 class="text-center">DailyLive</h1>
+    <div id=event-category>
+      <h1 class="text-center mt-5" ><%= @category.name%></h1>
+      <p class="text-center mb-0">Vous avez un live à nous soumettre ?</p>
+      <p class="text-center mb-5"><%= mail_to "lambertcamille23@gmail.com", "Contactez-nous" %></p>
+      <p class="text-center mb-2">Rendez vous le:</p>
+    </div>
 
-  <div class="datepicker">
-    <% 7.times do |i| %>
-      <% current_day = @today + i.days %>
-      <%= link_to category_events_path(@category.slug, day: current_day), class: "day #{'active' if current_day == @selected_day}" do %>
-        <span class="name"><%= day_name(current_day.wday) %></span>
-        <span class="number"><%= current_day.day %></span>
+    <div class="datepicker">
+      <% 7.times do |i| %>
+        <% current_day = @today + i.days %>
+        <%= link_to category_events_path(@category.slug, day: current_day), class: "day #{'active' if current_day == @selected_day}" do %>
+          <span class="name"><%= day_name(current_day.wday) %></span>
+          <span class="number"><%= current_day.day %></span>
+        <% end %>
+      <% end %>
+    </div>
+
+    <% if @events.empty? %>
+      <p class="text-center">Pas de live aujourd'hui</p>
+    <% else %>
+      <% @events.each do |event| %>
+        <div class="event-card">
+          <div class="hour">
+            <%= event.date.strftime('%Hh%M') %>
+          </div>
+          <div class="description">
+            <h5>
+              <%= event.title %>
+            </h5>
+            <p>
+              <%= event.description %>
+            </p>
+          </div>
+          <%= link_to "Participer", event.link %>
+        </div>
       <% end %>
     <% end %>
   </div>
-
-  <% if @events.empty? %>
-    <p class="text-center">Pas de live aujourd'hui</p>
-  <% else %>
-    <% @events.each do |event| %>
-      <div class="event-card">
-        <div class="hour">
-          <%= event.date.strftime('%Hh%M') %>
-        </div>
-        <div class="description">
-          <h5>
-            <%= event.title %>
-          </h5>
-          <p>
-            <%= event.description %>
-          </p>
-        </div>
-        <%= link_to "Participer", event.link %>
-      </div>
-    <% end %>
-  <% end %>
 </div>
 
