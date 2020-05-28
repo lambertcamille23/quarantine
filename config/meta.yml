@@ -5,5 +5,5 @@ meta_description: "Retrouvez tous les jours suivant vos disponibilités, vos ren
 Tous les meilleurs rendez-vous sont au programme !
 
 Pour ne rater aucun rendez-vous, n’oubliez pas à vous abonner à notre compte Instagram @daily.live"
-meta_image: "" # should exist in `app/assets/images/`
+meta_image: "meta.png" # should exist in `app/assets/images/`
 twitter_account: ""   # required for Twitter Cards
