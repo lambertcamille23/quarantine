@@ -1,5 +1,5 @@
 .event-card {
-  max-width: 588px;
+  max-width: 640px;
   margin: auto;
   margin-bottom: 32px;
   display: flex;
@@ -10,6 +10,7 @@
     font-size: 1.2em;
     font-weight: 300;
     margin-bottom: auto;
+    margin-top: -6px;
     font-family: 'lato', sans-serif;
   }
 
@@ -18,11 +19,12 @@
 
     h5, p {
       margin-bottom: 0;
+      font-size: 1.1em;
     }
 
     p {
       font-size: 0.85em;
-      font-weight: 300;
+      font-weight: 400;
       opacity: 0.8;
       font-family: 'Lato', sans-serif;
     }
