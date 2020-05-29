@@ -60,4 +60,15 @@ p#link-contact {
     letter-spacing: 0.1em;
 }
 
+@media screen and (max-width: 640px) {
+  .event-card {
+    flex-direction: column;
+    text-align: center;
+
+    .description {
+      margin: 8px 0;
+    }
+  }
+}
+
 
