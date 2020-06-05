@@ -20,7 +20,8 @@ ActiveAdmin.register Event do
       input :title
       input :description
       input :link
-      input :date#, as: :string
+      input :date, :as => :datepicker
+      input :date, :as => :time_picker
     end
     actions
   end
