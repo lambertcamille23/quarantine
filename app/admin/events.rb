@@ -20,7 +20,7 @@ ActiveAdmin.register Event do
       input :title
       input :description
       input :link
-      input :date#, as: :string
+      input :date, :as => :string, :input_html => {:class => "hasDatetimePicker"}
     end
     actions
   end

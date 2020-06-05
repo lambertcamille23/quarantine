@@ -36,6 +36,7 @@ gem 'autoprefixer-rails'
 gem 'font-awesome-sass'
 gem 'simple_form'
 gem 'faker'
+gem 'active_admin_datetimepicker'
 
 group :development, :test do  gem 'pry-byebug'
   gem 'pry-rails'
